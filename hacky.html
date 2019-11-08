@@ -18,10 +18,36 @@
     </div>
 
     <script>
-        let queue = [];
+        const main = document.getElementById("main");
+        let queue = ["<p>", "I ", "added ", "a ", "sentence.</p>"];
+
         function checkQ() {
-            while ()
+            main.innerHTML += "<br>";
+            while (queue.length > 0) {
+                setTimeout(function () {
+                    console.log("Q");
+                    main.innerHTML += queue[0];
+                    queue.shift();
+                }, 1000);
+
+            }
         }
+
+        // checkQ();
+
+        for (var i = 0; i < 5; i++) {
+            setTimeout(function () {
+                main.innerHTML += queue[0];
+                queue.shift();
+                console.log(queue);
+            }, 1000);
+        }
+
+        main.addEventListener("keydown", function () {
+
+        });
+
+
     </script>
 </body>
 </html>

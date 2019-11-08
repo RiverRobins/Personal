@@ -43,16 +43,18 @@
             border: 1px solid black;
             background-color: darkgray;
             color: black;
+            text-shadow: 0px 0px 5px black;
             transition-duration: .1s;
         }
         #smallest p:hover {
             border: 1px solid white;
             text-shadow: 0px 0px 10px white;
-            box-shadow: 10px 0px 10px 10px #aaa;
+            box-shadow: 0px 0px 10px 10px #aaa;
+            z-index: 0;
         }
         div.banner {
             width: 100%;
-            height: 60vh;
+            height: 120vh;
             background-image: url("imgs/abandoned.jpg");
             background-size: 100% 100%;
             display: flex;
@@ -66,7 +68,7 @@
         }
         div.banner p {
             background: none;
-            opacity: unset;
+            opacity: initial;
             color: white;
             font-size: 30px;
             text-align: center;
@@ -74,7 +76,7 @@
             padding-left: 15%;
             transition-duration: 2s;
             transition: height;
-            text-shadow: 0px 0px 15px black;
+            text-shadow: 0px 0px 30px black;
         }
         @media screen and (min-width:570px) {
             #smallest {
@@ -98,11 +100,11 @@
         <p>Hello, I am River.</p>
     </div>
 </div>
-<div class="footer">
-    <div>
-        <p>Footer</p>
-    </div>
-</div>
+<!--<div class="footer">-->
+<!--    <div>-->
+<!--        <p>Footer</p>-->
+<!--    </div>-->
+<!--</div>-->
 <script>
     function welcome() {
         let temp = document.getElementById("content");
@@ -111,6 +113,8 @@
     function about() {
         let temp = document.getElementById("content");
         temp.innerHTML = "<p>I am a job seeker currently attending the Codeup web developement program and set to graduate the Deimos cohort in early 2020. I have a passion for learning new things, especially related to programming and technology, that I intend to make the most of at every point possible.</p>";
+        temp.innerHTML += "<p> My skill set regarding programming is as follows:</p>";
+        temp.innerHTML += "<p> HTML, CSS, JavaScript(as well as the jQuery framework), Java(as well as the Spring framework), MySQL, and Python. Most of my work can be found on my GitHub page which is the first link on the 'Links' tab</p>"
     }
     function contact() {
         let temp = document.getElementById("content");
